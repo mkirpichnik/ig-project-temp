@@ -6,7 +6,7 @@ Config
 -------------------------
 Project folder contains ***Chrome-bin.rar***. It's local version of chrome browser which is ***works approporiate on the remote web-server*** with those scripts.
 
-Extract archive on the machine to ***C:\\inetpub\\wwwroot\\Scripts\\Chrome-bin*** or some other directory, but be aware that *binary_location* in each script specified to approporiate folder. 
+Extract archive on the machine to `C:\\inetpub\\wwwroot\\Scripts\\Chrome-bin` or some other directory, but be aware that `binary_location` in each script specified to approporiate folder. 
 
 ```python
 chrome_options.binary_location = "C:\\inetpub\\wwwroot\\Scripts\\Chrome-bin\\chrome.exe"
