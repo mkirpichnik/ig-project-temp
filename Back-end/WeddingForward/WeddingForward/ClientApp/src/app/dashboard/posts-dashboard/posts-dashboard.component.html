@@ -1,0 +1,104 @@
+<div class="d-flex flex-column align-items-center" *ngIf="loading">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+
+<div class="d-flex m-b10">
+  <button class="btn btn-block btn-info btn-add">
+    Add Account/Project
+  </button>
+</div>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="d-flex flex-column table-my" *ngIf="!loading">
+  <div class="d-flex flex-row table-header">
+    <div class="header-col icon-col">
+      Post
+    </div>
+    <div class="header-col type-col">
+      Type
+    </div>
+    <div class="header-col likes-col">
+      Likes
+    </div>
+    <div class="header-col comments-col">
+      Comments
+    </div>
+    <div class="header-col created-col">
+      Created
+    </div>
+    <div class="header-col last-update-col">
+      Last updated
+    </div>
+  </div>
+  <div class="d-flex flex-column" *ngIf="accounts">
+    <ng-container *ngFor="let accoount of accounts">
+      <ng-container *ngIf="posts[accoount.username]">
+        <div class="d-flex account-row">
+          <div class="account-name">
+            <a href="https:/instagram.com/{{accoount.username}}">
+              {{accoount.fullName}}
+            </a>
+          </div>
+        </div>
+        <div class="account-posts">
+          <ng-container *ngFor="let post of posts[accoount.username]">
+            <div class="d-flex d-flex flex-row post-item">
+              <div class="icon-col">
+                <a [href]="post.postLink" target="_blank">
+                  /{{post.postId}}
+                </a>
+              </div>
+              <div class="type-col">
+                {{post.postType}}
+              </div>
+              <div class="likes-col">
+                {{post.likesCount}}
+              </div>
+              <div class="comments-col">
+                {{post.commentsCount}}
+              </div>
+              <div class="created-col">
+                {{post.createdDateTime | date}}
+              </div>
+              <div class="last-update-col">
+                {{post.lastUpdate | date}}
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

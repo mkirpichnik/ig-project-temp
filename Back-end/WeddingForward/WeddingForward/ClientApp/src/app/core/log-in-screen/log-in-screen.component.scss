@@ -1,0 +1,27 @@
+:host {
+  display: block;
+  padding: 10px 30px;
+  max-width: 500px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.sign-in-options {
+  margin: 10px 0;
+  justify-content: space-around;
+}
+
+.sign-in-title {
+  text-align: center;
+}
+
+.other-option {
+  margin-bottom: 10px;
+}
+
+button.btn {
+  min-width: 200px;
+  border: 1px solid;
+  font-weight: 500;
+}

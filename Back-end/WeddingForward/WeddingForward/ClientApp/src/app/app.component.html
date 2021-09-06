@@ -1,0 +1,8 @@
+<body>
+  <div class="container">
+    <app-log-in-screen *ngIf="!isLoggined" (onFormSubmitted)="onFormSubmitted($event)">
+    </app-log-in-screen>
+    <app-posts-dashboard *ngIf="isLoggined">
+    </app-posts-dashboard>
+  </div>
+</body>
