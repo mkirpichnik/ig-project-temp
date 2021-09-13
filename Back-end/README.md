@@ -43,7 +43,7 @@ Solution contains 5 projects:
 - **WeddingForward.Api** - startup project of the solution, runs the web api.
 - **WeddingForward.ApplicationServices** - application services, contains business logic, integration between database and pything scripts, authorization and etc.
 - **WeddingForward.Data** - specified ORM database models, migrations.
-- **WeddingForward.Scheduler.Console** - console for working with API of web service like: added scripts to schedule, running scripts manually, retrieving results from db and etc. Added only for troubleshooting on running some logic manually.
+- **WeddingForward.Scheduler.Console** - console for working with API of web service like: added scripts to schedule, running scripts manually, retrieving results from db and etc. Added only for troubleshooting or running some logic manually.
 - **WeddingForward.ScheduleTaskExecutor** - scripts` schedule logic implementation.
 
 All the information about configuration contains in **appsettings.json** file.
