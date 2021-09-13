@@ -45,3 +45,47 @@ Solution contains 5 projects:
 - **WeddingForward.Data** - specified ORM database models, migrations.
 - **WeddingForward.Scheduler.Console** - console for working with API of web service like: added scripts to schedule, running scripts manually, retrieving results from db and etc. Added only for troubleshooting on running some logic manually.
 - **WeddingForward.ScheduleTaskExecutor** - scripts` schedule logic implementation.
+
+All the information about configuration contains in **appsettings.json** file.
+
+#### Connection String
+
+```json
+...
+"ConnectionStrings": {
+    "DefaultConnection": "Server={server},{port};Initial Catalog={db name};Persist Security Info=False;User ID={username};Password={password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+}
+...
+```
+
+#### Session Credentials
+
+You can add multiple accounts for multiple sessions.
+
+```code
+...
+"SystemAccountsCollection": {
+    "Accounts": [
+      {
+        "Login": "{login}",
+        "Pass": "{pass}"
+      },
+      {
+        ...
+      }
+    ]
+ }
+...
+```
+
+##  UI
+
+Written on **Angular 10.0.6**
+Requires: Node JS 12.11.1
+Location: **WeddingForward.Api/ClientApp**
+
+To launch UI follow next steps:
+- go to the folder of project **WeddingForward.Api** from cmd.
+- run command **npm install** to install all dependencies
+- run command **npm run build** to build the solution
+- Go to the visual studio and run the startup project **WeddingForward.Api** 
