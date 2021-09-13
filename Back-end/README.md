@@ -18,3 +18,4 @@ Update-Database
 ```
 
 ### Structure
+![Database structure](db-diagram.png)
