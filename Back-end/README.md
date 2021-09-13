@@ -34,3 +34,14 @@ Notes:
   - ScriptType - now suppords only 2 types of scripts:
     - **PostChecker** - add snapshot of trackable information about the certain post. 
     - **AccountsMonitoring** - scan for new posts on accounts which have already added to schedule.
+
+##  Server
+
+Written on ***ASP.NET Core 3.1***, works under IIS on Windows Server.
+
+Solution contains 5 projects:
+- **WeddingForward.Api** - startup project of the solution, runs the web api.
+- **WeddingForward.ApplicationServices** - application services, contains business logic, integration between database and pything scripts, authorization and etc.
+- **WeddingForward.Data** - specified ORM database models, migrations.
+- **WeddingForward.Scheduler.Console** - console for working with API of web service like: added scripts to schedule, running scripts manually, retrieving results from db and etc. Added only for troubleshooting on running some logic manually.
+- **WeddingForward.ScheduleTaskExecutor** - scripts` schedule logic implementation.
