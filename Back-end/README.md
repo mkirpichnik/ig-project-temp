@@ -81,7 +81,9 @@ You can add multiple accounts for multiple sessions.
 ##  UI
 
 Written on **Angular 10.0.6**
+
 Requires: Node JS 12.11.1
+
 Location: **WeddingForward.Api/ClientApp**
 
 To launch UI follow next steps:
