@@ -19,3 +19,18 @@ Update-Database
 
 ### Structure
 ![Database structure](db-diagram.png)
+
+Notes:
+- **PostContent** - table that contains information about one post`s slide:
+  - Column (ContentType) 
+    1.  Photo - **GraphImage**
+    2.  Video - **GraphVideo**
+    3.  Aggregated type for multiple slides post item - Carousel **(GraphSidecar)**
+- **AccountLinkedPosts** - define the relation between account and post.
+- **PostCheckerHistory** - high-level definition of scan with the information about account, post, date & time of check and id which represents details of scan.
+- **PostCheckDetailsSet** - represents details about post scan. For the future you can add more values here to compare the results.
+- **ScriptsSchedule** - definition of schedules which are have to be running automatically. 
+  - SessionId - name of the user on which application will open the session. If there is no one, the application will create new one and save it on the machine.
+  - ScriptType - now suppords only 2 types of scripts:
+    - **PostChecker** - add snapshot of trackable information about the certain post. 
+    - **AccountsMonitoring** - scan for new posts on accounts which have already added to schedule.
